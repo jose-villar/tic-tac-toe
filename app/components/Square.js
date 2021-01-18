@@ -1,11 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-function Square( { value, onClick } ) {
+import globalStyles from '../config/styles';
+
+function Square( { id, onClick, value, winnerLine } ) {
+
+  const isInWinnerLine = () => {
+    return winnerLine && winnerLine.includes(id);
+  }
 
   return(
-    <TouchableOpacity onPress={onClick} style={ styles.square }>
-      <Text style={{ fontSize:40 }}>{value}</Text>
+    <TouchableOpacity onPress={() => onClick(id)} style={ isInWinnerLine() ? styles.winnerSquare : styles.square }>
+      <Text style={ globalStyles.textBig }>{value}</Text>
     </TouchableOpacity>
   );
 }
@@ -13,6 +19,14 @@ function Square( { value, onClick } ) {
 const styles = StyleSheet.create({
   square: {
     alignItems:"center",
+    borderWidth:5,
+    flex:1,
+    height:"100%",
+    justifyContent:"center",
+  },
+  winnerSquare: {
+    alignItems:"center",
+    borderColor:globalStyles.colors.orange,
     borderWidth:5,
     flex:1,
     height:"100%",

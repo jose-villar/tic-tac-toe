@@ -4,6 +4,12 @@ export default {
   colors,
   text: {
     color: colors.white,
-    fontSize: 18,
+    fontSize: 25,
+    fontWeight:"bold"
   },
+  textBig: {
+    color: colors.white,
+    fontSize: 80,
+    fontWeight:"bold"
+  }
 };
