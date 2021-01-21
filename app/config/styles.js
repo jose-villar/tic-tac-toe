@@ -11,5 +11,9 @@ export default {
     color: colors.white,
     fontSize: 80,
     fontWeight:"bold"
+  },
+  link: {
+    color: colors.link,
+    textDecorationLine:"underline",
   }
 };

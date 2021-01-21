@@ -8,4 +8,5 @@ export default {
   primary: "black",
   secondary:"#aa1d12",
   white: "#fff",
+  link: "#04a8f4",
 }
