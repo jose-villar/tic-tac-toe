@@ -1,15 +1,17 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
-function Anchor({ style, text, url }) {
+function Anchor({ children, style, text, url }) {
 
   const handleOpenWithWebBrowser = () => {
     WebBrowser.openBrowserAsync(url);
   };
 
   return(
-    <Text onPress={ handleOpenWithWebBrowser } style={ style }> { text } </Text>
+    <TouchableOpacity activeOpacity={ 0.7 } onPress={ handleOpenWithWebBrowser }>
+      <Text style={ style }> { children } { text }</Text>
+    </TouchableOpacity>
   );
 }
 

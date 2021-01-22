@@ -1,22 +1,28 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet} from 'react-native';
+import { StyleSheet, View} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import Constants from 'expo-constants';
 
 import Game from './app/components/Game';
 import globalStyles from './app/config/styles';
+import Toolbar from './app/components/Toolbar';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={ styles.container }>
+      <StatusBar backgroundColor={ globalStyles.colors.black } style="light"/>
+      <Toolbar></Toolbar>
       <Game></Game>
-      <StatusBar style="light"/>
-    </SafeAreaView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+
   container: {
-    flex: 1,
     backgroundColor: globalStyles.colors.primary,
+    flex: 1,
+    marginTop: Constants.statusBarHeight,
   },
-});
+
+})

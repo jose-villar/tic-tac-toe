@@ -9,14 +9,22 @@ function Square( { id, onClick, value, winnerLine } ) {
     return winnerLine && winnerLine.includes(id);
   }
 
+  const handleStyle = () => {
+    return(
+      isInWinnerLine() ? styles.winnerSquare
+                       : styles.square
+    );
+  }
+
   return(
-    <TouchableOpacity onPress={() => onClick(id)} style={ isInWinnerLine() ? styles.winnerSquare : styles.square }>
-      <Text style={ globalStyles.textBig }>{value}</Text>
+    <TouchableOpacity onPress={() => onClick(id)} style={ handleStyle() }>
+      <Text style={ globalStyles.textBig }>{ value }</Text>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
+
   square: {
     alignItems:"center",
     borderWidth:5,
@@ -24,6 +32,7 @@ const styles = StyleSheet.create({
     height:"100%",
     justifyContent:"center",
   },
+
   winnerSquare: {
     alignItems:"center",
     borderColor:globalStyles.colors.orange,
@@ -31,7 +40,7 @@ const styles = StyleSheet.create({
     flex:1,
     height:"100%",
     justifyContent:"center",
-  }
+  },
 })
 
 export default Square;

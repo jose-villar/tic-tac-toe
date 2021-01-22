@@ -43,6 +43,7 @@ function Board({ onClick, squares, winnerLine  }) {
 }
 
 const styles = StyleSheet.create( {
+
   board: {
     backgroundColor: globalStyles.colors.black,
     borderWidth:5,
@@ -51,12 +52,14 @@ const styles = StyleSheet.create( {
     marginHorizontal:20,
     marginBottom:120,
   },
+
   row: {
     alignItems:"center",
     backgroundColor:globalStyles.colors.secondary,
     flex:1,
     flexDirection:"row",
-  }
+  },
+
 } )
 
 export default Board;

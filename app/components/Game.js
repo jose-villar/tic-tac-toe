@@ -74,12 +74,14 @@ function Game() {
 }
 
 const styles = StyleSheet.create({
+
   topMessage: {
     alignItems:"center",
     flex:1,
     justifyContent:"center",
     marginVertical:20,
-  }
+  },
+
 });
 
 export default Game;
