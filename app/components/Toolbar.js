@@ -9,8 +9,8 @@ function Toolbar() {
 
   return(
     <View style={ styles.bar }>
-      <Anchor style={ globalStyles.textSmall } text="Donate with Paypal" url="https://www.paypal.me/jvillar96" >
-        <FontAwesome5 name="donate" size={ 24 } color={ globalStyles.colors.white }/>
+      <Anchor style={ globalStyles.textSmall } text="Donate with Paypal" url="https://www.paypal.me/jvillar96">
+        <FontAwesome5 color={ globalStyles.colors.white } name="donate" size={ 24 } />
       </Anchor>
     </View>
   );

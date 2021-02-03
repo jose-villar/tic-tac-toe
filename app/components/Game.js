@@ -67,8 +67,8 @@ function Game() {
   return(
     <>
       {renderMesagge()}
-      <Board onClick={handleClick} squares={squares} winnerLine={winnerLine} />
-      <AppButton title="New Game" onPress={handleNewGame} />
+      <Board onClick={ handleClick } squares={ squares } winnerLine={ winnerLine } />
+      <AppButton onPress={ handleNewGame } title="New Game" />
     </>
   );
 }

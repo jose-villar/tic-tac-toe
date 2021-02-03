@@ -17,7 +17,7 @@ function Square( { id, onClick, value, winnerLine } ) {
   }
 
   return(
-    <TouchableOpacity onPress={() => onClick(id)} style={ handleStyle() }>
+    <TouchableOpacity onPress={ () => onClick( id ) } style={ handleStyle() }>
       <Text style={ globalStyles.textBig }>{ value }</Text>
     </TouchableOpacity>
   );

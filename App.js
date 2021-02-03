@@ -10,7 +10,7 @@ import Toolbar from './app/components/Toolbar';
 export default function App() {
   return (
     <View style={ styles.container }>
-      <StatusBar backgroundColor={ globalStyles.colors.black } style="light"/>
+      <StatusBar backgroundColor={ globalStyles.colors.black } style="light" />
       <Toolbar></Toolbar>
       <Game></Game>
     </View>

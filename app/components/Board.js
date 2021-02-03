@@ -26,13 +26,13 @@ function Board({ onClick, squares, winnerLine  }) {
         {renderSquare(2)}
       </View>
 
-      <View style={styles.row}>
+      <View style={ styles.row }>
         {renderSquare(3)}
         {renderSquare(4)}
         {renderSquare(5)}
       </View>
 
-      <View style={styles.row}>
+      <View style={ styles.row }>
         {renderSquare(6)}
         {renderSquare(7)}
         {renderSquare(8)}
